@@ -3,7 +3,7 @@
     "name": "YouTube URL Modifier",
     "version": "1.0",
     "description": "Redirige automatiquement les vidéos YouTube vers un lecteur sans cookie.",
-    "permissions": ["storage", "tabs", "scripting"],
+    "permissions": ["storage", "tabs", "contextMenus", "scripting"],
     "host_permissions": ["*://*.youtube.com/*"],
     "background": {
       "service_worker": "background.js"

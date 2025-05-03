@@ -1,9 +1,9 @@
 {
     "manifest_version": 3,
-    "name": "YouTube URL Modifier",
+    "name": "YouTube Redirect",
     "version": "1.0",
-    "description": "Redirige automatiquement les vidéos YouTube vers un lecteur sans cookie.",
-    "permissions": ["storage", "tabs", "contextMenus", "scripting"],
+    "description": "Redirige automatiquement vers youtube-nocookie.",
+    "permissions": ["storage", "tabs", "scripting", "contextMenus"],
     "host_permissions": ["*://*.youtube.com/*"],
     "background": {
       "service_worker": "background.js"
@@ -16,7 +16,17 @@
       }
     ],
     "action": {
-      "default_popup": "popup.html"
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "images/icon16.png",
+        "48": "images/icon48.png",
+        "128": "images/icon128.png"
+      }
+    },
+    "icons": {
+      "16": "images/icon16.png",
+      "48": "images/icon48.png",
+      "128": "images/icon128.png"
     }
   }
   

@@ -77,3 +77,27 @@ Permet d'**automatiquement** renvoyer vers une version **No Cookie** d'une vidé
 3. Suivre les étapes de la **Méthode 1 (non empaquetée)** ci-dessus
 
 ---
+
+## ❓ Questions fréquentes
+
+### Mon icône ne s’affiche pas ?
+
+- Vérifie que les chemins sont corrects (`icons` dans `manifest.json`)
+- Attention à la casse : `Icon48.png` ≠ `icon48.png`
+
+### Chrome bloque l'installation du `.crx` ?
+
+- Chrome refuse souvent les `.crx` non signés.
+- Solution : utiliser la **version non empaquetée**
+
+---
+
+## 📃 Licence
+
+MIT / GPL / Autre — À personnaliser selon votre projet.
+
+---
+
+## ✨ À propos
+
+Créé par [TonNom] – [Lien vers ton GitHub ou site]

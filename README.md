@@ -37,13 +37,20 @@ Permet d'**automatiquement** renvoyer vers une version **No Cookie** d'une vidé
 3. Cliquer sur **"Charger l’extension non empaquetée"**
 4. Sélectionner le dossier contenant `manifest.json`
 
-#### 🦊 Pour **Firefox**
+### 🦊 Pour Firefox
 
 1. Aller sur `about:debugging#/runtime/this-firefox`
 2. Cliquer sur **"Charger un module complémentaire temporaire"**
 3. Sélectionner le fichier `manifest.json` ou un `.zip` du dossier
 
-> ⚠️ Cette méthode est temporaire : l’extension sera retirée au redémarrage de Firefox.
+> ⚠️ Cette méthode est temporaire : l’extension sera retirée au redémarrage de Firefox.  
+> 🔧 Pour installer une extension non signée de manière plus durable, vous devez désactiver la vérification de signature :
+
+- Aller dans `about:config`
+- Rechercher `xpinstall.signatures.required`
+- **Changer la valeur en `false`** (double-clic)
+
+Ensuite, dans `about:debugging`, cliquez sur **"Charger un module complémentaire"** et sélectionnez le fichier `.xpi` de votre extension.
 
 ---
 
@@ -60,20 +67,11 @@ Permet d'**automatiquement** renvoyer vers une version **No Cookie** d'une vidé
    - Utiliser la version non empaquetée
    - Ou lancer Chrome avec le flag `--enable-extension-install-verification`
 
-### 🦊 Pour Firefox
+#### 🦊 Firefox (`.xpi`)
 
-1. Aller sur `about:debugging#/runtime/this-firefox`
-2. Cliquer sur **"Charger un module complémentaire temporaire"**
-3. Sélectionner le fichier `manifest.json` ou un `.zip` du dossier
-
-> ⚠️ Cette méthode est temporaire : l’extension sera retirée au redémarrage de Firefox.  
-> 🔧 Pour installer une extension non signée de manière plus durable, vous devez désactiver la vérification de signature :
-
-- Aller dans `about:config`
-- Rechercher `xpinstall.signatures.required`
-- **Changer la valeur en `false`** (double-clic)
-
-Ensuite, dans `about:debugging`, cliquez sur **"Charger un module complémentaire"** et sélectionnez le fichier `.xpi` de votre extension.
+1. Aller sur `about:addons`
+2. Cliquer sur la roue ⚙️ → **"Installer un module depuis un fichier…"**
+3. Sélectionner le fichier `.xpi`
 
 ---
 

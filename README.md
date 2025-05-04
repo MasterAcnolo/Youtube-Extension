@@ -1,10 +1,6 @@
 # YTNC - Youtube No Cookie
 
-Permet d'automatiquement renvoyer vers une version no cookie d'une vidéo youtube sélectionné.
-
-## Compatibilité
-
-Voici un tableau résumant la compatibilité de l'extension sur différents navigateurs.
+Permet d'**automatiquement** renvoyer vers une version **No Cookie** d'une vidéo Youtube sélectionné. _(Permet de ne plus avoir de Pub)_
 
 ## 🌐 Compatibilité des navigateurs
 
@@ -18,3 +14,5 @@ Voici un tableau résumant la compatibilité de l'extension sur différents navi
 | **Safari**          | ❌ Non     | Manifest V3 non officiellement pris en charge. Conversion via Xcode requise.   |
 
 > ℹ️ Pour Firefox, une version alternative utilisant `manifest_version: 2` est recommandée. Version pour Firefox à venir.
+
+## Installation

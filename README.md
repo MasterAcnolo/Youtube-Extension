@@ -94,7 +94,7 @@ Permet d'**automatiquement** renvoyer vers une version **No Cookie** d'une vidé
 
 ## 📃 Licence
 
-MIT / GPL / Autre — À personnaliser selon votre projet.
+Ce projet est sous **licence GPLv3** - voir le fichier [LICENSE](LICENCE) pour plus de détails.
 
 ---
 

@@ -16,42 +16,33 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-// Compatibilité Firefox / Chrome
-if (typeof browser === "undefined") {
-  var browser = chrome;
-}
-
 
 function redirectToNoCookie() {
-    const url = new URL(window.location.href);
-    const videoId = url.searchParams.get("v");
-  
-    if (videoId) {
-      const newUrl = `https://www.youtube-nocookie.com/embed/${videoId}`;
-      window.location.replace(newUrl);
-    }
+  const url = new URL(window.location.href);
+  const videoId = url.searchParams.get("v");
+
+  if (videoId) {
+    const newUrl = `https://www.youtube-nocookie.com/embed/${videoId}`;
+    window.location.replace(newUrl);
   }
-  
+}
+
+function checkAndRedirect() {
   chrome.storage.sync.get(["enabled"], (result) => {
     const isEnabled = result.enabled ?? true;
     if (isEnabled && window.location.href.includes("watch?v=")) {
       redirectToNoCookie();
     }
   });
-  
-  const observer = new MutationObserver(() => {
-    if (window.location.href.includes("watch?v=")) {
-      chrome.storage.sync.get(["enabled"], (result) => {
-        const isEnabled = result.enabled ?? true;
-        if (isEnabled) {
-          redirectToNoCookie();
-        }
-      });
-    }
-  });
-  
-  observer.observe(document, {
-    subtree: true,
-    childList: true
-  });
-  
+}
+
+checkAndRedirect();
+
+const observer = new MutationObserver(() => {
+  checkAndRedirect();
+});
+
+observer.observe(document, {
+  subtree: true,
+  childList: true
+});

@@ -16,46 +16,38 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-// Compatibilité Firefox / Chrome
-if (typeof browser === "undefined") {
-  var browser = chrome;
-}
-
 chrome.runtime.onInstalled.addListener(() => {
-    
-    chrome.contextMenus.create({
-      id: "toggle-extension",
-      title: "Activer / Désactiver",
-      contexts: ["action"]
-    });
+  chrome.contextMenus.create({
+    id: "toggle-extension",
+    title: "Activer / Désactiver",
+    contexts: ["browser_action"]
+  });
 
-    chrome.contextMenus.create({
-      id: "open-github",
-      title: "Code source",
-      contexts: ["action"]
+  chrome.contextMenus.create({
+    id: "open-github",
+    title: "Code source",
+    contexts: ["browser_action"]
+  });
+
+  chrome.storage.sync.get(["enabled"], (result) => {
+    const enabled = result.enabled ?? true;
+    chrome.browserAction.setIcon({
+      path: enabled ? "images/icon128.png" : "images/icon16.png"
     });
-  
-    
+  });
+});
+
+chrome.contextMenus.onClicked.addListener((info) => {
+  if (info.menuItemId === "toggle-extension") {
     chrome.storage.sync.get(["enabled"], (result) => {
-      const enabled = result.enabled ?? true; 
-      chrome.action.setIcon({
-        path: enabled ? "images/icon128.png" : "images/icon16.png"
+      const newState = !(result.enabled ?? true);
+      chrome.storage.sync.set({ enabled: newState });
+
+      chrome.browserAction.setIcon({
+        path: newState ? "images/icon128.png" : "images/icon16.png"
       });
     });
-  });
-  
-  chrome.contextMenus.onClicked.addListener((info) => {
-    if (info.menuItemId === "toggle-extension") {
-      chrome.storage.sync.get(["enabled"], (result) => {
-        const newState = !(result.enabled ?? true);
-        chrome.storage.sync.set({ enabled: newState });
-        chrome.action.setIcon({
-          path: newState ? "images/icon128.png" : "images/icon16.png"
-        }); 
-      });
-    
-    } else if (info.menuItemId === "open-github") {
-      chrome.tabs.create({ url: "https://github.com/MasterAcnolo/Youtube-Extension" });
-    }
-  });
-  
+  } else if (info.menuItemId === "open-github") {
+    chrome.tabs.create({ url: "https://github.com/MasterAcnolo/Youtube-Extension" });
+  }
+});

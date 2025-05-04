@@ -18,20 +18,24 @@
 
 
 
-const checkbox = document.getElementById("toggle");
+document.addEventListener("DOMContentLoaded", () => {
+  const checkbox = document.getElementById("toggle");
+  const textButton = document.getElementById("TextButton");
 
-chrome.storage.sync.get(["enabled"], (result) => {
-  checkbox.checked = result.enabled ?? true;
-});
-
-checkbox.addEventListener("change", () => {
-  chrome.storage.sync.set({ enabled: checkbox.checked });
-  if (checkbox.checked){
-
-    document.getElementById("TextButton").innerHTML='Activer'
-  
-  } else{
-    document.getElementById("TextButton").innerHTML="Desactiver"
+  if (!checkbox || !textButton) {
+    console.warn("Éléments du DOM non trouvés.");
+    return;
   }
 
+  chrome.storage.sync.get(["enabled"], (result) => {
+    const enabled = result.enabled ?? true;
+    checkbox.checked = enabled;
+    textButton.textContent = enabled ? "Activer" : "Désactiver";
+  });
+
+  checkbox.addEventListener("change", () => {
+    const isChecked = checkbox.checked;
+    chrome.storage.sync.set({ enabled: isChecked });
+    textButton.textContent = isChecked ? "Activer" : "Désactiver";
+  });
 });

@@ -1,39 +1,42 @@
 {
-    "manifest_version": 2,
-    "name": "YouTube Redirect Firefox Version",
-    "version": "1.2",
-    "description": "Permet de Rediriger vers Youtube-NoCookie Automatiquement",
-    "permissions": ["storage", "tabs", "scripting", "contextMenus"],
-    "host_permissions": ["*://*.youtube.com/*"],
-    "background": {
-      "scripts": ["script/extensions/background.js"]
-    },
-    "content_scripts": [
-      {
-        "matches": ["*://*.youtube.com/*"],
-        "js": ["script/extensions/content.js"],
-        "run_at": "document_start"
-      }
-    ],
-    "action": {
-      "default_title": "Youtube NoCookie",
-      "default_popup": "index.html",
-      "default_icon": {
-        "16": "images/icon16.png",
-        "48": "images/icon48.png",
-        "128": "images/icon128.png"
-      }
-    },
-    "icons": {
+  "manifest_version": 2,
+  "name": "[FIREFOX] Youtube NoCookie",
+  "version": "1.2",
+  "description": "Redirige automatiquement YouTube vers YouTube-NoCookie.",
+  "permissions": [
+    "storage",
+    "tabs",
+    "contextMenus",
+    "*://*.youtube.com/*"
+  ],
+  "background": {
+    "scripts": ["script/extensions/background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["script/extensions/content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "browser_action": {
+    "default_title": "Youtube NoCookie",
+    "default_popup": "index.html",
+    "default_icon": {
       "16": "images/icon16.png",
       "48": "images/icon48.png",
       "128": "images/icon128.png"
-    },
-    "browser_specific_settings": {
-      "gecko": {
-        "id": "youtube-redirect@example.com",
-        "strict_min_version": "109.0"
-      }
+    }
+  },
+  "icons": {
+    "16": "images/icon16.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  },
+  "applications": {
+    "gecko": {
+      "id": "youtube-redirect@example.com"
     }
   }
-  
+}

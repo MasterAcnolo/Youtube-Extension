@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "name": "[FIREFOX] Youtube NoCookie",
+  "name": "FIREFOX Youtube NoCookie",
   "version": "1.2",
   "description": "Redirige automatiquement YouTube vers YouTube-NoCookie.",
   "permissions": [

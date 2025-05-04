@@ -1,0 +1,15 @@
+v1.0 - 03/05/2025
+- Redirection vers youtube-nocookie
+- Compatible Chrome/Chromium
+
+v1.1 - 04/05/2025
+- Réorganisation des fichiers
+- Ajout du tutoriel d'installation
+- Small Fixs
+
+v1.2 - 04/05/2025
+- Support Firefox Partiel (.xpi)
+- Amélioration UI/ergonomie
+- README enrichi
+
+

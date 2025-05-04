@@ -1,17 +1,11 @@
 chrome.runtime.onInstalled.addListener(() => {
-    // Crée les options du menu contextuel
+    
     chrome.contextMenus.create({
       id: "toggle-extension",
       title: "Activer / Désactiver",
       contexts: ["action"]
     });
-  
-    // chrome.contextMenus.create({
-    //   id: "view-logs",
-    //   title: "Voir les logs",
-    //   contexts: ["action"]
-    // });
-    
+
     chrome.contextMenus.create({
       id: "open-github",
       title: "Code source sur GitHub",
@@ -37,10 +31,9 @@ chrome.runtime.onInstalled.addListener(() => {
         // Met à jour l'icône de l'extension en fonction de l'état
         chrome.action.setIcon({
           path: newState ? "images/icon128.png" : "images/icon16.png"
-        });
+        }); 
       });
-    // } else if (info.menuItemId === "view-logs") {
-    //   chrome.tabs.create({ url: "logs.html" });
+    
     } else if (info.menuItemId === "open-github") {
       chrome.tabs.create({ url: "https://github.com/MasterAcnolo/Youtube-Extension" });
     }

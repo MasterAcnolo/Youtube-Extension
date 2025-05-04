@@ -26,4 +26,12 @@ chrome.storage.sync.get(["enabled"], (result) => {
 
 checkbox.addEventListener("change", () => {
   chrome.storage.sync.set({ enabled: checkbox.checked });
+  if (checkbox.checked){
+
+    document.getElementById("TextButton").innerHTML='Activer'
+  
+  } else{
+    document.getElementById("TextButton").innerHTML="Desactiver"
+  }
+
 });

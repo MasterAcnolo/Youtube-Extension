@@ -1,22 +1,23 @@
 {
     "manifest_version": 3,
     "name": "YouTube Redirect",
-    "version": "1.1",
+    "version": "1.2",
     "description": "Permet de Rediriger vers Youtube-NoCookie Automatiquement",
     "permissions": ["storage", "tabs", "scripting", "contextMenus"],
     "host_permissions": ["*://*.youtube.com/*"],
     "background": {
-      "service_worker": "scripts/background.js"
+      "service_worker": "menu/script/extensions/background.js"
     },
     "content_scripts": [
       {
         "matches": ["*://*.youtube.com/*"],
-        "js": ["scripts/content.js"],
+        "js": ["menu/script/extensions/content.js"],
         "run_at": "document_start"
       }
     ],
     "action": {
-      "default_popup": "menu/menu.html",
+      "default_title": "Youtube NoCookie",
+      "default_popup": "menu/index.html",
       "default_icon": {
         "16": "images/icon16.png",
         "48": "images/icon48.png",

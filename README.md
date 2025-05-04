@@ -6,16 +6,16 @@ Permet d'**automatiquement** renvoyer vers une version **No Cookie** d'une vidé
 
 ## 🌐 Compatibilité des navigateurs
 
-| Navigateur          | Supporté |
-| ------------------- | -------- |
-| **Google Chrome**   | ✅ Oui   |
-| **Opera**           | ✅ Oui   |
-| **Microsoft Edge**  | ✅ Oui   |
-| **Brave / Vivaldi** | ✅ Oui   |
-| **Firefox**         | ✅ Oui   |
-| **Safari**          | ❌ Non   |
+| Navigateur          | Supporté   |
+| ------------------- | ---------- |
+| **Google Chrome**   | ✅ Oui     |
+| **Opera**           | ✅ Oui     |
+| **Microsoft Edge**  | ✅ Oui     |
+| **Brave / Vivaldi** | ✅ Oui     |
+| **Firefox**         | ⚠️ Partiel |
+| **Safari**          | ❌ Non     |
 
-> ℹ️ Pour Firefox, une version alternative utilisant `manifest_version: 2` est recommandée. Version pour Firefox à venir.
+> ℹ️ Pour Firefox, la version stable arrivera. Car à chaque redémarrage l'extension se désactivera
 
 ---
 

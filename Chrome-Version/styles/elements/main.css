@@ -3,7 +3,8 @@ body {
     padding: 20px;
     background-color: #e6e6e6;
     min-width: 200px;
-    
+    justify-items: center;
+    align-items: center;
   }
 
   h1 {

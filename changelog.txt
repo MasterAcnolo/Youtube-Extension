@@ -12,4 +12,3 @@ v1.2 - 04/05/2025
 - Amélioration UI/ergonomie
 - README enrichi
 
-

@@ -16,38 +16,43 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-chrome.runtime.onInstalled.addListener(() => {
-  chrome.contextMenus.create({
+// background.js
+console.log("✅ Background.js chargé !");
+
+browser.runtime.onInstalled.addListener(() => {
+  console.log("🔧 Extension installée");
+
+  browser.contextMenus.create({
     id: "toggle-extension",
     title: "Activer / Désactiver",
     contexts: ["browser_action"]
   });
 
-  chrome.contextMenus.create({
+  browser.contextMenus.create({
     id: "open-github",
     title: "Code source",
     contexts: ["browser_action"]
   });
 
-  chrome.storage.sync.get(["enabled"], (result) => {
+  browser.storage.sync.get("enabled").then(result => {
     const enabled = result.enabled ?? true;
-    chrome.browserAction.setIcon({
+    browser.browserAction.setIcon({
       path: enabled ? "images/icon128.png" : "images/icon16.png"
     });
   });
 });
 
-chrome.contextMenus.onClicked.addListener((info) => {
+browser.contextMenus.onClicked.addListener((info) => {
   if (info.menuItemId === "toggle-extension") {
-    chrome.storage.sync.get(["enabled"], (result) => {
+    browser.storage.sync.get("enabled").then(result => {
       const newState = !(result.enabled ?? true);
-      chrome.storage.sync.set({ enabled: newState });
+      browser.storage.sync.set({ enabled: newState });
 
-      chrome.browserAction.setIcon({
+      browser.browserAction.setIcon({
         path: newState ? "images/icon128.png" : "images/icon16.png"
       });
     });
   } else if (info.menuItemId === "open-github") {
-    chrome.tabs.create({ url: "https://github.com/MasterAcnolo/Youtube-Extension" });
+    browser.tabs.create({ url: "https://github.com/MasterAcnolo/Youtube-Extension" });
   }
 });

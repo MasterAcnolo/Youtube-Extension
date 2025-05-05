@@ -16,7 +16,6 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-
 function redirectToNoCookie() {
   const url = new URL(window.location.href);
   const videoId = url.searchParams.get("v");
@@ -28,7 +27,7 @@ function redirectToNoCookie() {
 }
 
 function checkAndRedirect() {
-  chrome.storage.sync.get(["enabled"], (result) => {
+  browser.storage.sync.get(["enabled"]).then((result) => {
     const isEnabled = result.enabled ?? true;
     if (isEnabled && window.location.href.includes("watch?v=")) {
       redirectToNoCookie();

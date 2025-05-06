@@ -7,6 +7,7 @@
     "host_permissions": ["*://*.youtube.com/*"],
     "background": {
       "service_worker": "script/extensions/background.js"
+      
     },
     "content_scripts": [
       {

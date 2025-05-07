@@ -1,12 +1,12 @@
 {
     "manifest_version": 3,
-    "name": "YouTube Redirect",
-    "version": "1.3",
+    "name": "[BUILD VERSION] YouTube Redirect",
+    "version": "Build A.1.3",
     "description": "Permet de Rediriger vers Youtube-NoCookie Automatiquement",
     "permissions": ["storage", "tabs", "scripting", "contextMenus"],
     "host_permissions": ["*://*.youtube.com/*"],
     "background": {
-      "service_worker": "script/extensions/background.js"
+      "service_worker": "script/extensions/stats/background.js"
       
     },
     "content_scripts": [

@@ -1,30 +1,26 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Youtube NoCookie</title>
+  <link rel="stylesheet" href="styles/imports.css">
+</head>
+<body>
 
-    <link href="styles/imports.css" rel="stylesheet">
+  
+    <h1>Youtube NoCookie</h1>
+
+    <input type="checkbox" id="toggle-extension">Extension:</input>
+    <span class="label-text" id="TextButton"> Activé </span>
     
-  </head>
-  <body>
-
-    <div class="popup-container">
-
-      <h1>Redirection YouTube</h1>
-
-      <label class="switch">
-
-        <input type="checkbox" id="toggle">
-        <span class="slider"></span>
-
-      </label>
-      
-      <span class="label-text" id="TextButton">Activer</span>
-
-    </div>
+    <button id="copy-url" style="display: none;">Copier l'URL sans NoCookie</button>
     
-
     
-    <script src="script/script.js"></script>
-  </body>
+    <p id="warning-text" style="display: none;">Vous devez être sur une vidéo YouTube pour copier l'URL.</p>
+
+  
+
+  <script src="script/ui/popup.js"></script>
+</body>
 </html>

@@ -1,37 +1,27 @@
-/**
- * MonExtension - Extension pour rediriger les vidéos YouTube vers youtube-nocookie.
- * Copyright (C) 2025 MasterAcnolo
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <https://www.gnu.org/licenses/>.
- */
+const toggleBtn = document.getElementById("toggle-extension");
+const statusText = document.getElementById("status-text");
 
+function updateStatusUI(enabled) {
+  toggleBtn.textContent = enabled ? "Désactiver l'extension" : "Activer l'extension";
+  statusText.textContent = enabled ? "Extension activée ✅" : "Extension désactivée ❌";
+}
 
+function loadState() {
+  chrome.storage.sync.get(["enabled"], (result) => {
+    const enabled = result.enabled ?? true;
+    updateStatusUI(enabled);
+  });
+}
 
-const checkbox = document.getElementById("toggle");
+toggleBtn.addEventListener("click", () => {
+  chrome.storage.sync.get(["enabled"], (result) => {
+    const currentState = result.enabled ?? true;
+    const newState = !currentState;
 
-chrome.storage.sync.get(["enabled"], (result) => {
-  checkbox.checked = result.enabled ?? true;
+    chrome.storage.sync.set({ enabled: newState }, () => {
+      updateStatusUI(newState);
+    });
+  });
 });
 
-checkbox.addEventListener("change", () => {
-  chrome.storage.sync.set({ enabled: checkbox.checked });
-  if (checkbox.checked){
-
-    document.getElementById("TextButton").innerHTML='Activer'
-  
-  } else{
-    document.getElementById("TextButton").innerHTML="Desactiver"
-  }
-
-});
+loadState();

@@ -1,51 +1,22 @@
-const toggleCheckbox = document.getElementById("toggle-checkbox");
-const statusText = document.getElementById("TextButton");
-const copyUrlBtn = document.getElementById("copy-url");
-const warningText = document.getElementById("warning-text");
+document.addEventListener('DOMContentLoaded', () => {
 
-function updateStatusUI(enabled) {
-  toggleCheckbox.checked = enabled;
-  statusText.textContent = enabled ? "Activé" : "Désactivé";
-}
+  
+  const toggleCheckbox = document.getElementById('toggle-checkbox');
+  const textButton = document.getElementById('TextButton');
+  const warningText = document.getElementById('warning-text');
 
-function copyUrl() {
-  const url = window.location.href;
-  const videoId = new URL(url).searchParams.get("v");
-
-  if (videoId) {
-    const noCookieUrl = `https://www.youtube-nocookie.com/embed/${videoId}`;
-    navigator.clipboard.writeText(noCookieUrl).then(() => {
-      alert("URL copiée : " + noCookieUrl);
-    }).catch(() => {
-      alert("Erreur lors de la copie de l'URL");
-    });
-  } else {
-    warningText.style.display = "block";
-  }
-}
-
-function loadState() {
-  chrome.storage.sync.get(["enabled"], (result) => {
+  chrome.storage.sync.get(['enabled'], (result) => {
     const enabled = result.enabled ?? true;
-    updateStatusUI(enabled);
-
-    if (window.location.href.includes("watch?v=")) {
-      copyUrlBtn.style.display = "inline-block";
-      warningText.style.display = "none";
-    } else {
-      copyUrlBtn.style.display = "none";
-      warningText.style.display = "block";
-    }
+    toggleCheckbox.checked = enabled;
+    textButton.textContent = enabled ? 'Activé' : 'Désactivé';
   });
-}
 
-toggleCheckbox.addEventListener("change", () => {
-  const enabled = toggleCheckbox.checked;
-  chrome.storage.sync.set({ enabled }, () => {
-    updateStatusUI(enabled);
+ 
+  toggleCheckbox.addEventListener('change', () => {
+    const newState = toggleCheckbox.checked;
+    chrome.storage.sync.set({ enabled: newState });
+    textButton.textContent = newState ? 'Activé' : 'Désactivé';
   });
+
+  
 });
-
-copyUrlBtn.addEventListener("click", copyUrl);
-
-loadState();

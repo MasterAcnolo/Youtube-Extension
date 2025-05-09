@@ -34,7 +34,7 @@
   }
   
   .toggle-container input:checked ~ .toggle-button::before {
-    left: 33px; /* Déplace le bouton à droite */
+    left: 33px; 
   }
   
   .toggle-button:active::before {

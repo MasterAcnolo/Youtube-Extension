@@ -1,22 +1,22 @@
-const toggleBtn = document.getElementById("toggle-extension");
+const toggleCheckbox = document.getElementById("toggle-checkbox");
 const statusText = document.getElementById("TextButton");
 const copyUrlBtn = document.getElementById("copy-url");
 const warningText = document.getElementById("warning-text");
 
 function updateStatusUI(enabled) {
-  toggleBtn.textContent = enabled ? "Désactiver l'extension" : "Activer l'extension";
+  toggleCheckbox.checked = enabled;
   statusText.textContent = enabled ? "Activé" : "Désactivé";
 }
 
 function copyUrl() {
   const url = window.location.href;
-  const videoId = new URL(url).searchParams.get('v');
-  
+  const videoId = new URL(url).searchParams.get("v");
+
   if (videoId) {
     const noCookieUrl = `https://www.youtube-nocookie.com/embed/${videoId}`;
     navigator.clipboard.writeText(noCookieUrl).then(() => {
-      alert("URL copié : " + noCookieUrl);
-    }).catch(err => {
+      alert("URL copiée : " + noCookieUrl);
+    }).catch(() => {
       alert("Erreur lors de la copie de l'URL");
     });
   } else {
@@ -39,14 +39,10 @@ function loadState() {
   });
 }
 
-toggleBtn.addEventListener("click", () => {
-  chrome.storage.sync.get(["enabled"], (result) => {
-    const currentState = result.enabled ?? true;
-    const newState = !currentState;
-
-    chrome.storage.sync.set({ enabled: newState }, () => {
-      updateStatusUI(newState);
-    });
+toggleCheckbox.addEventListener("change", () => {
+  const enabled = toggleCheckbox.checked;
+  chrome.storage.sync.set({ enabled }, () => {
+    updateStatusUI(enabled);
   });
 });
 

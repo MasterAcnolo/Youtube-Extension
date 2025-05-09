@@ -1,4 +1,6 @@
-@import url(elements/button.css);
 @import url(elements/main.css);
+@import url(variables.css);
+@import url(elements/slider.css);
+@import url(elements/resetbutton.css);
 
-@import url(variables.css)
+

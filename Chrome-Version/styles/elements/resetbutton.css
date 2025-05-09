@@ -1,0 +1,23 @@
+#reset-counter {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  #reset-counter:hover {
+    background-color: #c0392b;
+  }
+  
+  #reset-counter:active {
+    transform: scale(0.98);
+  }
+  
+  #reset-counter:focus {
+    outline: 2px solid #2980b9;
+  }
+  

@@ -30,7 +30,7 @@ async function copyYouTubeLinkFromTab() {
     }
 
     if (!videoId) {
-      updateButton("Aucune vidéo détectée ❌", false);
+      updateButton("No Video", false);
       return;
     }
 

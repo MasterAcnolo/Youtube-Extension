@@ -1,8 +1,4 @@
-.toggle-container {
-    display: flex;
-  
-  }
-  
+
   .toggle-container input {
     display: none; 
   }

@@ -1,0 +1,35 @@
+.header{
+
+  background-color: rgb(243, 243, 243);
+  padding: 10px;
+  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+}
+
+.first-line {
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  align-self: center;
+  gap: 10px; 
+}
+
+.copy-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.counter-container{
+
+  font-size: 140%;
+  
+}
+
+.toggle-container {
+    display: flex;
+  
+}
+  

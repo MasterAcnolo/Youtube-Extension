@@ -7,6 +7,7 @@
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s;
+    
   }
   
   #reset-counter:hover {

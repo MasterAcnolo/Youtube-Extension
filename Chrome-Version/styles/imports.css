@@ -1,7 +1,7 @@
 @import url(elements/main.css);
 @import url(variables.css);
-@import url(elements/slider.css);
-@import url(elements/resetbutton.css);
-@import url(elements/copybutton.css);
-
-
+@import url(elements/container.css);
+@import url(elements/texts.css);
+@import url(elements/button/slider.css);
+@import url(elements/button/resetbutton.css);
+@import url(elements/button/copybutton.css);

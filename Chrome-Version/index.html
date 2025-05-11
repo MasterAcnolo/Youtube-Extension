@@ -8,31 +8,40 @@
 </head>
 <body>
 
-  <h1>Youtube NoCookie</h1>
+  <div class="header">
 
-  <div class="first-line">
-    <div class="toggle-container">
-      <input type="checkbox" id="toggle-checkbox" />
-      <label class="toggle-button" for="toggle-checkbox" title="Activer ou Désactiver l'extension"></label>
+    <h1>Youtube NoCookie</h1>
+
+    <div class="first-line">
+
+      <div class="toggle-container">
+
+        <input type="checkbox" id="toggle-checkbox" />
+        <label class="toggle-button" for="toggle-checkbox" title="Activer ou Désactiver l'extension"></label>
+
+      </div>
+
+      <span class="label-text" id="TextButton">Activé</span>
+
     </div>
-    <span class="label-text" id="TextButton">Activé</span>
-  </div>
-  
-  <div class="counter-container">
-    <p>Vidéos redirigées : <span id="redirect-count">0</span></p>
-    <button id="reset-counter" title="Réinitialiser le compteur de redirections">Réinitialiser</button>
-  </div>
     
-  <div class="copy-container">
-    <button id="copy-button" title="Copier le lien de la vidéo Youtube">Copier le lien</button>
+    <div class="counter-container">
 
-      <!-- <div class="toggle-version-container">
-        <input type="checkbox" id="nocookie-toggle"/>
-        <label for="nocookie-toggle">Utiliser NoCookie</label>
-      </div> -->
+      <p>Vidéos redirigées : <span id="redirect-count">0</span></p>
+      <button id="reset-counter" title="Réinitialiser le compteur de redirections">Réinitialiser</button>
+
+    </div>
+      
+    <div class="copy-container">
+
+      <button id="copy-button" title="Copier le lien de la vidéo Youtube">Copier le lien</button>
+
+    </div>
+    
   </div>
 
   <script src="script/ui/popup.js"></script>
   <script src="script/features/copy.js"></script>
+  
 </body>
 </html>

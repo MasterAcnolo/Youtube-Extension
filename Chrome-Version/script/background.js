@@ -43,6 +43,6 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
    } else if (menuId === "versionactuelle") {
     chrome.tabs.create({ url: "https://www.youtube.com/watch?v=SeE6dzk1tO0&pp=ygUdaW5zcGVjdGV1ciBnYWRnZXQgZ8OpbsOpcmlxdWU%3D" });
   }
-
+  
 
 });

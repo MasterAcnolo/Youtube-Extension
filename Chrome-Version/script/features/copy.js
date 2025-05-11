@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const button = document.getElementById("copy-button");
-  if (button) {
-    button.addEventListener("click", copyYouTubeLinkFromTab);
+  const copyButton = document.getElementById("copy-button");
+  if (copyButton) {
+    copyButton.addEventListener("click", copyYouTubeLinkFromTab);
   }
 });
 
@@ -15,26 +15,29 @@ async function copyYouTubeLinkFromTab() {
     const url = new URL(tab.url);
     let videoId = null;
 
-    // Cas Youtube standard
     if (url.hostname.includes("youtube.com") && url.searchParams.has("v")) {
       videoId = url.searchParams.get("v");
-    }
-
-    // Cas YouTube NoCookie
-    if (url.hostname.includes("youtube-nocookie.com")) {
+    } else if (url.hostname.includes("youtube.com") && url.pathname.startsWith("/shorts/")) {
+      const match = url.pathname.match(/\/shorts\/([a-zA-Z0-9_-]+)/);
+      if (match) {
+        videoId = match[1];
+      }
+    } else if (url.hostname.includes("youtube-nocookie.com")) {
       const match = url.pathname.match(/\/embed\/([a-zA-Z0-9_-]+)/);
       if (match) {
         videoId = match[1];
       }
     }
 
-    if (videoId) {
-      const noCookieURL = `https://www.youtube-nocookie.com/embed/${videoId}`;
-      await navigator.clipboard.writeText(noCookieURL);
-      updateButton("Lien copié ✅", true);
-    } else {
+    if (!videoId) {
       updateButton("Aucune vidéo détectée ❌", false);
+      return;
     }
+
+    const finalURL = `https://www.youtube.com/watch?v=${videoId}`;
+
+    await navigator.clipboard.writeText(finalURL);
+    updateButton("Lien copié ✅", true);
   } catch (err) {
     console.error("Erreur lors de la copie :", err);
     updateButton("Erreur ❌", false);

@@ -1,0 +1,14 @@
+:root{ /* White Theme*/
+    --text-color: rgb(26, 26, 26);
+    --background-color: #e6e6e6;
+    --background-color-reversed: #353535;
+}
+
+
+.dark-theme{
+
+    --text-color: rgb(238, 238, 238);
+    --background-color: #353535;
+    --background-color-reversed: #e6e6e6;
+    
+}

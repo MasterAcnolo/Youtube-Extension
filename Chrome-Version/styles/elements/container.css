@@ -1,14 +1,4 @@
-.header{
 
-  background-color: rgb(243, 243, 243);
-  padding: 10px;
-  border-radius: 8px;
-  justify-content: center;
-  align-items: center;
-  justify-content: center;
-  align-items: center;
-
-}
 
 .first-line { /*First Line est le parent pour le slider */
   display: flex; 
@@ -31,4 +21,3 @@
 .toggle-container {
     display: flex;
 }
-  

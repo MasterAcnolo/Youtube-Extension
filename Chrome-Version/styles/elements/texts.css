@@ -1,5 +1,5 @@
 h1{
-  color: rgb(26, 26, 26);
+  color: var(--text-color);
   text-align: center;
 }
 

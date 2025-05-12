@@ -2,6 +2,7 @@
 @import url(variables.css);
 @import url(elements/container.css);
 @import url(elements/texts.css);
+@import url(elements/button/themetoggle.css);
 @import url(elements/button/slider.css);
 @import url(elements/button/resetbutton.css);
 @import url(elements/button/copybutton.css);

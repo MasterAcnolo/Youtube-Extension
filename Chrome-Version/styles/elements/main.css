@@ -1,9 +1,19 @@
 body{
   font-family: 'Poppins', sans-serif;
-  background-color: #f5f5f5;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  padding: 10px;
+  margin: 0;
+  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
 }
 
-
+/* L'essentiel n'est pas d'écrire du beau code, c'est d'écrire du code qui nous ressemble - M.Acnolo*/
 
 .label-text {
   min-width: 85px; 

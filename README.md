@@ -15,7 +15,16 @@ Permet d'**automatiquement** renvoyer vers une version **No Cookie** d'une vidé
 | **Firefox**         | ⚠️ Partiel |
 | **Safari**          | ❌ Non     |
 
-> ℹ️ Pour Firefox, la version stable arrivera. Car à chaque redémarrage l'extension se désactivera
+> ℹ️ Pour Firefox, la version stable n'est pas privilégiée. Elle arrivera sûrement avec en décalé de la version Chrome
+
+---
+
+## ♻️ Fonctionnalités
+
+- **Redirection de Youtube vers une version **No Cookie** (Sans Pub)**
+- **Possibilité de désactiver l'extension avec l'aide d'un simple bouton**
+- **Statistiques d'Utilisation (Local)**
+- **Copie du lien de la vidéo sous la forme Youtube Classique**
 
 ---
 
@@ -63,9 +72,6 @@ Ensuite, dans `about:debugging`, cliquez sur **"Charger un module complémentair
 1. Ouvrir `chrome://extensions/`
 2. Activer **Mode développeur**
 3. Glisser-déposer le fichier `.crx` dans la page
-4. Chrome peut refuser si l’extension ne vient pas du Chrome Web Store. Dans ce cas :
-   - Utiliser la version non empaquetée
-   - Ou lancer Chrome avec le flag `--enable-extension-install-verification`
 
 #### 🦊 Firefox (`.xpi`)
 
@@ -92,11 +98,6 @@ Ensuite, dans `about:debugging`, cliquez sur **"Charger un module complémentair
 - Chrome refuse souvent les `.crx` non signés.
 - Solution : utiliser la **version non empaquetée**
 
-### Mon icône ne s’affiche pas ?
-
-- Vérifie que les chemins sont corrects (`icons` dans `manifest.json`)
-- Attention à la casse : `Icon48.png` ≠ `icon48.png`
-
 ---
 
 ## 📃 Licence
@@ -107,4 +108,4 @@ Ce projet est sous **licence GPLv3** - voir le fichier [LICENSE](LICENCE) pour p
 
 ## ✨ À propos
 
-Créé par **MasterAcnolo**
+Créé par **MasterAcnolo**. Fait avec le coeur dans l'objectif de ne plus perdre de temps avec des publicités inutile par moment. Avec utilisation de l'IA pour certaines parties du projet. En espérant qu'il vous sera utile 🫶.

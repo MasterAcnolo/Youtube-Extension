@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "[BUILD VERSION] YouTube Redirect",
+  "name": "YouTube NoCookie",
   "version": "1.3",
   "description": "Permet de rediriger vers YouTube-NoCookie automatiquement",
   "permissions": ["storage", "tabs", "scripting", "contextMenus", "clipboardWrite"],
@@ -16,7 +16,7 @@
     }
   ],
   "action": {
-    "default_title": "[BUILD VERSION] Youtube NoCookie",
+    "default_title": "Youtube NoCookie",
     "default_popup": "index.html",
     "default_icon": {
       "16": "images/icon16.png",

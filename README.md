@@ -2,7 +2,7 @@
 
 ### Permet d'**automatiquement** renvoyer vers une version **No Cookie** d'une vidéo Youtube sélectionné. _(Permet de ne plus avoir de Pub)_ Si jamais vous avez des soucis, des bugs ou des suggestions. Utilisez la section **Issue** de GitHub pour réaliser cette demande.
 
-<img alt="Static Badge" src="https://img.shields.io/badge/Chrome-1.2-Green?style=for-the-badge"> <img alt="Static Badge" src="https://img.shields.io/badge/Firefox-1.2-orange?style=for-the-badge">
+<img alt="Static Badge" src="https://img.shields.io/badge/Chrome-1.3-Green?style=for-the-badge"> <img alt="Static Badge" src="https://img.shields.io/badge/Firefox-1.2-orange?style=for-the-badge">
 
 ## 🌐 Compatibilité des navigateurs
 

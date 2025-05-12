@@ -1,8 +1,8 @@
 # YTNC - Youtube No Cookie
 
-Permet d'**automatiquement** renvoyer vers une version **No Cookie** d'une vidéo Youtube sélectionné. _(Permet de ne plus avoir de Pub)_
+## [**Dernière Version Stable: 1.2**]
 
----
+#### Permet d'**automatiquement** renvoyer vers une version **No Cookie** d'une vidéo Youtube sélectionné. _(Permet de ne plus avoir de Pub)_ Si jamais vous avez des soucis, des bugs ou des suggestions. Utilisez la section **Issue** de GitHub pour réaliser cette demande.
 
 ## 🌐 Compatibilité des navigateurs
 
@@ -15,7 +15,7 @@ Permet d'**automatiquement** renvoyer vers une version **No Cookie** d'une vidé
 | **Firefox**         | ⚠️ Partiel |
 | **Safari**          | ❌ Non     |
 
-> ℹ️ Pour Firefox, la version stable n'est pas privilégiée. Elle arrivera sûrement avec en décalé de la version Chrome
+> ℹ️ Pour Firefox, Les mises à jour arriveront sans doute en décaler par rapport à la version Chrome. Parce que je préfère Chrome et que pour vérifier l'extension sur Firefox c'est long et fastidieux.
 
 ---
 
@@ -37,33 +37,7 @@ Permet d'**automatiquement** renvoyer vers une version **No Cookie** d'une vidé
 
 ---
 
-### 🔧 Méthode 1 – Installation non empaquetée (version développeur)
-
-#### 🧭 Pour **Chrome / Chromium**
-
-1. Aller sur `chrome://extensions/`
-2. Activer **Mode développeur** (coin supérieur droit)
-3. Cliquer sur **"Charger l’extension non empaquetée"**
-4. Sélectionner le dossier contenant `manifest.json`
-
-### 🦊 Pour Firefox
-
-1. Aller sur `about:debugging#/runtime/this-firefox`
-2. Cliquer sur **"Charger un module complémentaire temporaire"**
-3. Sélectionner le fichier `manifest.json` ou un `.zip` du dossier
-
-> ⚠️ Cette méthode est temporaire : l’extension sera retirée au redémarrage de Firefox.  
-> 🔧 Pour installer une extension non signée de manière plus durable, vous devez désactiver la vérification de signature :
-
-- Aller dans `about:config`
-- Rechercher `xpinstall.signatures.required`
-- **Changer la valeur en `false`** (double-clic)
-
-Ensuite, dans `about:debugging`, cliquez sur **"Charger un module complémentaire"** et sélectionnez le fichier `.xpi` de votre extension.
-
----
-
-### 📦 Méthode 2 – Installation d’un fichier empaqueté
+### 📦 Méthode 1 – Installation d’un fichier empaqueté
 
 #### 🧭 Chrome / Chromium (`.crx`)
 
@@ -81,22 +55,12 @@ Ensuite, dans `about:debugging`, cliquez sur **"Charger un module complémentair
 
 ---
 
-### 🗜️ Méthode 3 – Installation depuis un fichier `.zip`
-
-#### Pour les développeurs ou testeurs
-
-1. Télécharger le fichier `.zip`
-2. Extraire le dossier sur votre machine
-3. Suivre les étapes de la **Méthode 1 (non empaquetée)** ci-dessus
-
----
-
 ## ❓ Questions fréquentes
 
 ### Chrome bloque l'installation du `.crx` ?
 
 - Chrome refuse souvent les `.crx` non signés.
-- Solution : utiliser la **version non empaquetée**
+- Solution : utiliser la **version non empaquetée (Zip)**
 
 ---
 

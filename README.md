@@ -2,7 +2,7 @@
 
 ## [**Dernière Version Stable: 1.2**]
 
-#### Permet d'**automatiquement** renvoyer vers une version **No Cookie** d'une vidéo Youtube sélectionné. _(Permet de ne plus avoir de Pub)_ Si jamais vous avez des soucis, des bugs ou des suggestions. Utilisez la section **Issue** de GitHub pour réaliser cette demande.
+### Permet d'**automatiquement** renvoyer vers une version **No Cookie** d'une vidéo Youtube sélectionné. _(Permet de ne plus avoir de Pub)_ Si jamais vous avez des soucis, des bugs ou des suggestions. Utilisez la section **Issue** de GitHub pour réaliser cette demande.
 
 ## 🌐 Compatibilité des navigateurs
 

@@ -18,3 +18,5 @@ V1.3 - 12/05/2025
 - Bouton Copie Lien (Sous Forme Youtube Classique)
 - Statistique D'Utilisation (Local)
 - Thème Sombre / Clair
+
+A Venir: Support Firefox de la 1.3

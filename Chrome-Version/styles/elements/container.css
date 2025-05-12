@@ -5,31 +5,30 @@
   border-radius: 8px;
   justify-content: center;
   align-items: center;
+  justify-content: center;
+  align-items: center;
+
 }
 
-.first-line {
+.first-line { /*First Line est le parent pour le slider */
   display: flex; 
-  align-items: center; 
-  justify-content: center;
-  align-self: center;
   gap: 10px; 
+  margin-left: 10px;
 }
 
 .copy-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
   margin-top: 20px;
+  flex-direction: column;
 }
 
 .counter-container{
-
+  display: flex;
   font-size: 140%;
-  
+  flex-direction: column;
 }
 
 .toggle-container {
     display: flex;
-  
 }
   

@@ -46,3 +46,10 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
   
 
 });
+
+// On définit les parties du "menu clic droit aka Menu Contextuel"
+// Le Menu Contextuel a 3 propriétés actuellement: ID (Utile pour des redirections ou l'usage de méthode additionelles). Le Title qui est équivaut au contenu de la section du menu. C'est ici que le "Titre sera mit."
+// Il y a aussi le contexts, ce qui est un peu équivalent à la méthode utilisé. Comme pour GET et POST pour les API. 
+// Ensuite a la fin on rajoute les actions à faire. Ici par exemple on associe des conditions a des actions si jamais la case est réalisé. J'aurai pu utiliser un switch et des case par exemple. Mais je ne l'ai pas fait car If et Else marche aussi très bien.
+
+

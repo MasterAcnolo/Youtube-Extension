@@ -35,3 +35,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
+// Dans un premier temps on récupère les IDs Cible du HTML en les associant à des termes plus simple à utiliser. Comme ça on pourra utiliser les méthodes
+// La Fonction Refresh Count intéragi avec le compteur. On se sert du local storage pour stocker et utiliser le compteur. En allant chercher (sync) la valeur de redirectCount. 
